@@ -9,5 +9,4 @@ class TechTaskApplicationTests {
     @Test
     void contextLoads() {
     }
-
 }
