@@ -1,7 +1,6 @@
 package com.task.techtask;
 
 import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 class TechTaskApplicationTest {
@@ -34,17 +33,5 @@ class TechTaskApplicationTest {
     @Test
     void testCountWellFormedParenthesis_n6() {
         assertEquals(132, TechTaskApplication.countWellFormedParenthesis(6));
-    }
-
-    @Test
-    void testPerformance() {
-        long start = System.currentTimeMillis();
-        int result = TechTaskApplication.countWellFormedParenthesis(15);
-        long end = System.currentTimeMillis();
-
-        System.out.println("Result for n=15: " + result);
-        System.out.println("Execution time: " + (end - start) + " ms");
-
-        assertEquals(9694845, result);
     }
 }

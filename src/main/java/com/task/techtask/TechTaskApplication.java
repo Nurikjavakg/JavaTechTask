@@ -35,4 +35,11 @@ public class TechTaskApplication {
 
         return count;
     }
+
+    public static long checkPerformance(int n){
+        long start = System.nanoTime();
+        countWellFormedParenthesis(n);
+        long end = System.nanoTime();
+        return end - start;
+    }
 }
