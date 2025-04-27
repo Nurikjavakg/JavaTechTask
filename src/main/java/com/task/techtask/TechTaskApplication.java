@@ -15,25 +15,15 @@ public class TechTaskApplication {
     }
 
     public static int countWellFormedParenthesis(int n) {
-        return countCombinations(0, 0, n);
+        return countCombinations(n);
     }
 
-    private static int countCombinations(int open, int close, int max) {
-        if (open == max && close == max) {
-            return 1;
+    private static int countCombinations(int n) {
+        long result = 1;
+        for (int i = 0; i < n; i++) {
+            result = result * 2 * (2 * i + 1) / (i + 2);
         }
-
-        int count = 0;
-
-        if (open < max) {
-            count += countCombinations(open + 1, close, max);
-        }
-
-        if (close < open) {
-            count += countCombinations(open, close + 1, max);
-        }
-
-        return count;
+        return (int) result;
     }
 
     public static long checkPerformance(int n){
